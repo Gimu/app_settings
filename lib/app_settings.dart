@@ -6,6 +6,11 @@ class AppSettings {
   // Static constant variable to initialize MethodChannel of 'app_settings'.
   static const MethodChannel _channel = const MethodChannel('app_settings');
 
+  /// Future async method call to open accessibility settings.
+  static Future<void> openAccessibilitySettings() async {
+    _channel.invokeMethod('accessibility');
+  }
+
   /// Future async method call to open WIFI settings.
   static Future<void> openWIFISettings() async {
     _channel.invokeMethod('wifi');

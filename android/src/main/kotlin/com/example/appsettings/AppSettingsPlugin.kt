@@ -75,7 +75,9 @@ class AppSettingsPlugin(): MethodCallHandler, FlutterPlugin, ActivityAware {
 
   /// Handler method to manage method channel calls.
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "wifi") {
+    if (call.method == "accessibility") {
+      openSettings(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+    } else if (call.method == "wifi") {
       openSettings(Settings.ACTION_WIFI_SETTINGS)
     } else if (call.method == "location") {
       openSettings(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
