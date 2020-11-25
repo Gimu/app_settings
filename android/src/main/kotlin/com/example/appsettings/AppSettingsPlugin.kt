@@ -107,7 +107,7 @@ class AppSettingsPlugin(): MethodCallHandler, FlutterPlugin, ActivityAware {
       openSettings(Settings.ACTION_INTERNAL_STORAGE_SETTINGS)
     } else if (call.method == "battery_optimization") {
       openSettings(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS)
-    } else if (call.method == "app_settings") {
+    } else {
       openAppSettings()
     }
   }
